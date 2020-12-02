@@ -3,7 +3,7 @@
   <div class="p-grid nested-grid">
     <div class="p-col-6">
       <div class="p-col-12">
-        <label for="itemtext">抽選するものを入力(改行区切り)</label>
+        <label for="itemtext">抽選するものを入力してください(改行区切り)</label>
         <TextArea
           id="itemtext"
           v-model="itemText"
