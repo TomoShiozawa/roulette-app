@@ -48,10 +48,6 @@ export default {
       this.results = [];
       const copyItems = JSON.parse(JSON.stringify(this.items));
 
-      if (this.num > this.items) {
-        return;
-      }
-
       for (let i = 0; i < this.num; i++) {
         const randomNum = Math.floor(Math.random() * copyItems.length);
         const result = copyItems[randomNum];
