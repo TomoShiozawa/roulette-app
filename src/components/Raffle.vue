@@ -12,14 +12,17 @@
         />
       </div>
       <div class="p-col-12">
+        <span>選ぶ個数</span>
+        <InputNumber v-model="num" />
+      </div>
+      <div class="p-col-12">
         <Button label="抽選" class="width-100" @click="raffle" />
       </div>
     </div>
     <div class="p-col-6">
-      <h2 class="p-text-center">
-        選ばれたのは<br />
-        {{ result }}<br />
-        でした
+      <h2 class="p-text-center">選ばれたのは</h2>
+      <h2 v-for="(result, index) in results" :key="index" class="p-text-center">
+        {{ result }}
       </h2>
     </div>
   </div>
@@ -31,34 +34,30 @@ export default {
   data() {
     return {
       itemText: '',
-      result: '',
+      results: [],
+      num: 1,
     };
   },
   computed: {
     items() {
       return this.itemText.split('\n');
     },
-    pieChartData() {
-      return {
-        labels: this.items,
-        datasets: [
-          {
-            data: this.items.map(() => 1),
-            backgroundColor: this.items.map(
-              () =>
-                '#' +
-                `000000${Math.floor(Math.random() * 16777215).toString(
-                  16
-                )}`.slice(-6)
-            ),
-          },
-        ],
-      };
-    },
   },
   methods: {
     raffle() {
-      this.result = this.items[Math.floor(Math.random() * this.items.length)];
+      this.results = [];
+      const copyItems = JSON.parse(JSON.stringify(this.items));
+
+      if (this.num > this.items) {
+        return;
+      }
+
+      for (let i = 0; i < this.num; i++) {
+        const randomNum = Math.floor(Math.random() * copyItems.length);
+        const result = copyItems[randomNum];
+        this.results.push(result);
+        copyItems.splice(randomNum, 1);
+      }
     },
   },
 };
