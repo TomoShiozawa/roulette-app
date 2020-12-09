@@ -1,4 +1,5 @@
-# roulette
+# raffle app
+https://tomoshiozawa.github.io/raffle-app/
 
 ## Project setup
 ```
