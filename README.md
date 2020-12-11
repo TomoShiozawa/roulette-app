@@ -1,5 +1,6 @@
-# raffle app
-https://tomoshiozawa.github.io/raffle-app/
+# About
+適当にVueで作る遊び場
+https://tomoshiozawa.github.io/vue-app/
 
 ## Project setup
 ```
