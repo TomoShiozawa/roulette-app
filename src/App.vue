@@ -1,14 +1,15 @@
 <template>
-  <Raffle />
+  <h1>ちょっとした時に便利なツール</h1>
+  <TabMenu />
 </template>
 
 <script>
-import Raffle from './components/Raffle.vue';
+import TabMenu from './components/TabMenu.vue';
 
 export default {
   name: 'App',
   components: {
-    Raffle,
+    TabMenu,
   },
 };
 </script>

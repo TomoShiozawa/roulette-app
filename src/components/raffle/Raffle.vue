@@ -1,5 +1,5 @@
 <template>
-  <h1>Raffle</h1>
+  <h2>シンプルな抽選</h2>
   <div class="p-grid nested-grid">
     <div class="p-col-6">
       <div class="p-col-12">
@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="p-col-6">
-      <h2 class="p-text-center">選ばれたのは</h2>
+      <h2 class="p-text-center">選ばれたのは...</h2>
       <h2 v-for="(result, index) in results" :key="index" class="p-text-center">
         {{ result }}
       </h2>
