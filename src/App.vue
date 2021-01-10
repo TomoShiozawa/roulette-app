@@ -25,5 +25,8 @@ body {
   text-align: center;
   color: var(--text-color);
   margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1080px;
 }
 </style>
