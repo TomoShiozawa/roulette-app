@@ -1,5 +1,5 @@
 <template>
-  <h1>ちょっとした時に便利なツール</h1>
+  <h1 class="p-text-center">ちょっとした時に便利なツール</h1>
   <TabMenu />
 </template>
 
@@ -23,7 +23,6 @@ body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: var(--text-color);
   margin-top: 60px;
   margin-left: auto;
