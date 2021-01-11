@@ -7,7 +7,7 @@
         <TextArea
           id="itemtext"
           v-model="itemText"
-          rows="20"
+          rows="15"
           class="width-100"
         />
       </div>
