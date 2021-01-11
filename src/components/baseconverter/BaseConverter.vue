@@ -51,6 +51,20 @@
         @input="changeNumbers(selectedBaseNumber, selectedBase)"
       />
     </div>
+    <div class="p-field p-col-12 p-sm-6">
+      <Dropdown
+        v-model="selectedBase2"
+        :options="selectBases"
+        option-label="name"
+        option-value="base"
+        @change="changeNumbers(selectedBaseNumber2, selectedBase2)"
+      />
+      <InputText
+        v-model="selectedBaseNumber2"
+        class="input-text"
+        @input="changeNumbers(selectedBaseNumber2, selectedBase2)"
+      />
+    </div>
   </div>
 </template>
 
@@ -61,11 +75,13 @@ export default {
     return {
       masterNum: 0,
       selectedBase: 10,
+      selectedBase2: 10,
       decimalNumber: null,
       binaryNumber: null,
       octalNumber: null,
       hexadecimalNumber: null,
       selectedBaseNumber: null,
+      selectedBaseNumber2: null,
       selectBases: [...Array(31).keys()].map((val) => {
         return { name: `${val + 2}進数`, base: val + 2 };
       }),
@@ -83,6 +99,7 @@ export default {
       this.octalNumber = this.masterNum.toString(8);
       this.hexadecimalNumber = this.masterNum.toString(16);
       this.selectedBaseNumber = this.masterNum.toString(this.selectedBase);
+      this.selectedBaseNumber2 = this.masterNum.toString(this.selectedBase2);
     },
   },
 };
