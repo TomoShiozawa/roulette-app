@@ -5,15 +5,17 @@ import Button from 'primevue/button';
 import TabPanel from 'primevue/tabpanel';
 import TabView from 'primevue/tabview';
 import Dropdown from 'primevue/dropdown';
+import Card from 'primevue/card';
 
 const PrimeComponents = {
-  TextArea: TextArea,
-  InputText: InputText,
-  InputNumber: InputNumber,
-  Button: Button,
-  TabPanel: TabPanel,
-  TabView: TabView,
-  Dropdown: Dropdown,
+  TextArea,
+  InputText,
+  InputNumber,
+  Button,
+  TabPanel,
+  TabView,
+  Dropdown,
+  Card,
 };
 
 export default PrimeComponents;
