@@ -19,6 +19,7 @@
     "primeicons": "^4.1.0",
     "primevue": "^3.0.0",
     "sass-loader": "^10.1.0",
+    "swiper": "^6.4.10",
     "vue": "^3.0.0"
   },
   "devDependencies": {
@@ -31,7 +32,6 @@
     "electron-devtools-installer": "^3.1.0",
     "eslint": "^6.7.2",
     "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-vue": "^7.1.0",
     "prettier": "^2.1.2",
     "vue-cli-plugin-electron-builder": "~2.0.0-rc.5",
