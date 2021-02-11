@@ -5,9 +5,9 @@ module.exports = {
     node: true,
   },
   extends: [
-    'plugin:vue/vue3-recommended',
     'eslint:recommended',
-    'plugin:prettier/recommended',
+    'plugin:vue/vue3-recommended',
+    'prettier',
     'prettier/vue',
   ],
   globals: {
@@ -19,6 +19,5 @@ module.exports = {
     sourceType: 'module',
     parser: 'babel-eslint',
   },
-  plugins: ['vue', 'prettier'],
   rules: {},
 };
